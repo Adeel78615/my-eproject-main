@@ -1,0 +1,37 @@
+# Dependency directories
+**/node_modules/
+**/bower_components/
+
+# Python virtual environments and caches
+**/.venv/
+**/venv/
+**/ENV/
+**/env/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Next.js build output
+**/.next/
+**/out/
+
+# Environment files (which might contain secrets)
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS metadata
+.DS_Store
+Thumbs.db
