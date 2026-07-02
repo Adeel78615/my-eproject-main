@@ -1,3 +1,5 @@
+const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:8000'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -15,71 +17,71 @@ const nextConfig = {
       // Proxy all API calls (except NextAuth) to FastAPI backend
       {
         source: '/api/auth/login',
-        destination: 'http://localhost:8000/api/auth/login',
+        destination: `${BACKEND_URL}/api/auth/login`,
       },
       {
         source: '/api/auth/register',
-        destination: 'http://localhost:8000/api/auth/register',
+        destination: `${BACKEND_URL}/api/auth/register`,
       },
       {
         source: '/api/dashboard/:path*',
-        destination: 'http://localhost:8000/api/dashboard/:path*',
+        destination: `${BACKEND_URL}/api/dashboard/:path*`,
       },
       {
         source: '/api/climate-data/:path*',
-        destination: 'http://localhost:8000/api/climate-data/:path*',
+        destination: `${BACKEND_URL}/api/climate-data/:path*`,
       },
       {
         source: '/api/climate-data',
-        destination: 'http://localhost:8000/api/climate-data',
+        destination: `${BACKEND_URL}/api/climate-data`,
       },
       {
         source: '/api/countries/:path*',
-        destination: 'http://localhost:8000/api/countries/:path*',
+        destination: `${BACKEND_URL}/api/countries/:path*`,
       },
       {
         source: '/api/countries',
-        destination: 'http://localhost:8000/api/countries',
+        destination: `${BACKEND_URL}/api/countries`,
       },
       {
         source: '/api/analytics/:path*',
-        destination: 'http://localhost:8000/api/analytics/:path*',
+        destination: `${BACKEND_URL}/api/analytics/:path*`,
       },
       {
         source: '/api/analytics',
-        destination: 'http://localhost:8000/api/analytics',
+        destination: `${BACKEND_URL}/api/analytics`,
       },
       {
         source: '/api/alerts/:path*',
-        destination: 'http://localhost:8000/api/alerts/:path*',
+        destination: `${BACKEND_URL}/api/alerts/:path*`,
       },
       {
         source: '/api/alerts',
-        destination: 'http://localhost:8000/api/alerts',
+        destination: `${BACKEND_URL}/api/alerts`,
       },
       {
         source: '/api/reports/:path*',
-        destination: 'http://localhost:8000/api/reports/:path*',
+        destination: `${BACKEND_URL}/api/reports/:path*`,
       },
       {
         source: '/api/reports',
-        destination: 'http://localhost:8000/api/reports',
+        destination: `${BACKEND_URL}/api/reports`,
       },
       {
         source: '/api/support/:path*',
-        destination: 'http://localhost:8000/api/support/:path*',
+        destination: `${BACKEND_URL}/api/support/:path*`,
       },
       {
         source: '/api/support',
-        destination: 'http://localhost:8000/api/support',
+        destination: `${BACKEND_URL}/api/support`,
       },
       {
         source: '/api/admin/:path*',
-        destination: 'http://localhost:8000/api/admin/:path*',
+        destination: `${BACKEND_URL}/api/admin/:path*`,
       },
       {
         source: '/api/health',
-        destination: 'http://localhost:8000/api/health',
+        destination: `${BACKEND_URL}/api/health`,
       },
     ]
   },
