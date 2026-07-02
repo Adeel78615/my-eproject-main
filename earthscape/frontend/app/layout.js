@@ -8,6 +8,9 @@ export const metadata = {
   keywords: ['climate', 'monitoring', 'analytics', 'environment', 'earth'],
 }
 
+export const dynamic = 'force-dynamic'
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
