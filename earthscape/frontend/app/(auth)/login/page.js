@@ -3,7 +3,9 @@
 import Link from 'next/link'
 import { Leaf } from 'lucide-react'
 import LoginForm from '@/components/auth/LoginForm'
-import InteractiveWorldMap from '@/components/map/InteractiveWorldMap'
+import dynamic from 'next/dynamic'
+
+const InteractiveWorldMap = dynamic(() => import('@/components/map/InteractiveWorldMap'), { ssr: false })
 
 export default function LoginPage() {
   return (

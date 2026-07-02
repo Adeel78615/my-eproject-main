@@ -2,8 +2,10 @@ import connectDB from '@/lib/db'
 import ClimateReading from '@/models/ClimateReading'
 import PageHeader from '@/components/layout/PageHeader'
 import CountryCard from '@/components/countries/CountryCard'
-import InteractiveWorldMap from '@/components/map/InteractiveWorldMap'
 import Card from '@/components/ui/Card'
+import dynamic from 'next/dynamic'
+
+const InteractiveWorldMap = dynamic(() => import('@/components/map/InteractiveWorldMap'), { ssr: false })
 
 async function getCountries() {
   await connectDB()
